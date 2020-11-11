@@ -10,10 +10,10 @@ fn parse_command() -> u32 {
             .read_line(&mut option)
             .expect("failed to read line");
 
-        let option: u32 = match option.trim().parse() {
+        match option.trim().parse() {
             Ok(num) => return num,
             Err(_) => continue
-        };
+        }
     }
 }
 
